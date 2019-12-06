@@ -8,6 +8,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.atmecs.php.base.Base;
 import com.atmecs.php.config.Constant;
@@ -27,6 +28,7 @@ public class PhpTravels extends Base {
 	public DateAndTime dateAndTime = new DateAndTime();
 	public FindObject find = new FindObject();
 	String detail="(//button[contains(text(),'Details')])[*]";
+	
 
 	@BeforeClass
 	public void browserLaunch() {
@@ -35,13 +37,30 @@ public class PhpTravels extends Base {
 		report.logInfo("Step 2 : Enter url");
 		getUrl(utils.propertyRead(Constant.config_file, "url"));
 	}
+	
+	
+	@BeforeMethod
+	public void checkFrames()
+	{
+		boolean alertPresent = helper.isAlertPresent(driver);
+		if(alertPresent) {
+			helper.findFrame(driver,"chat-widget");
+		}
+		else
+		{
+			report.logInfo("No ad's");
+		}
+		
+	}
 
 	@Test(priority = 1)
 	public void bookingHotel() throws Exception {
 		wait.implicitlyWait(driver);
 		report.logInfo("Step 3:Click on hotel");
-		helper.clickOnWebElement(driver, Constant.homePageLoc_file, "loc_hotel");
-		Actions action = new Actions(driver);
+	    helper.clickOnWebElement(driver, Constant.homePageLoc_file, "loc_hotel");
+		
+		  
+		 
 
 		report.logInfo("Step 4:Verify user is landed into Home page ");
 		String currentUrl = driver.getCurrentUrl();
@@ -58,6 +77,7 @@ public class PhpTravels extends Base {
 		WebElement findElement = driver.findElement(By.xpath("(//input[@type='text'])[1]"));
 		findElement.sendKeys("bangalore");
 		Thread.sleep(2000);
+		Actions action=new Actions(driver);
 		action.sendKeys(Keys.ENTER).build().perform();
 		Thread.sleep(5000);
 
@@ -160,8 +180,6 @@ public class PhpTravels extends Base {
 				break;
 			}
 		}
-		
-		System.out.println("***THE END***");
 	}
 
 }

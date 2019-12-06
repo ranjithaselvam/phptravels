@@ -5,6 +5,8 @@
     <classes>
       <class name="com.atmecs.php.test.PhpTravels">
         <methods>
+          <include name="bookingHotel"/>
+          <include name="checkFrames"/>
           <include name="identifyHotel"/>
           <include name="browserLaunch"/>
         </methods>

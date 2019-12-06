@@ -4,14 +4,22 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
+
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.atmecs.php.fingObject.FindObject;
@@ -189,8 +197,74 @@ public class Helper {
 
 		
 		}
+		
+		
+		 public static int findframenumber(WebDriver driver,By by) {
+		        int i;
+		        int framecount=driver.findElements(By.tagName("iframe")).size();
 
+		        for (i=0;i<framecount;i++) {
+		            driver.switchTo().frame(i);
+		            int count=driver.findElements(by).size();
+		            if(count>0) {
+		                break;
+		            } else{
+
+		            }
+		        }
+		        driver.switchTo().defaultContent();
+		        return i;
+		    }
+		
+
+	public void findFrame(WebDriver driver,String name)
+	{
+		try {
+			List<WebElement> elements = driver.findElements(By.tagName("iframe"));
+			int numberOfTags = elements.size();
+			System.out.println("No. of Iframes on this Web Page are: " + numberOfTags);
+
+			driver.switchTo().frame(name);
+			System.out.println("Switching to the frame");
+			Actions actions = new Actions(driver);
+			WebElement findElement = driver.findElement(By.cssSelector(".lc-2xnp29.e1m5b1js0 .lc-1mpchac"));
+			actions.moveToElement(findElement).perform();
+            findElement.click();
+
+			driver.switchTo().parentFrame();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
 	
+	public boolean isAlertPresent(WebDriver driver){
+	    boolean foundAlert = false;
+	    WebDriverWait wait = new WebDriverWait(driver,30);
+	   try {
+	        wait.until(ExpectedConditions.alertIsPresent());
+	        foundAlert = true;
+	       
+	    } catch (TimeoutException eTO) {
+	        foundAlert = false;
+	    }
+		return foundAlert;
+		
+	    
+	}
+	
+	
+	public  void isAlertPresents(WebDriver driver){
+	    try{
+	    Alert alert = driver.switchTo().alert();
+	    System.out.println(alert.getText()+" Alert is Displayed"); 
+	    }
+	    catch(NoAlertPresentException ex){
+	    System.out.println("Alert is NOT Displayed");
+	    }
+	    }
+	
+
 	
 }
 
