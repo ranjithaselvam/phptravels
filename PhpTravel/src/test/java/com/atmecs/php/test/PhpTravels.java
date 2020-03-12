@@ -40,10 +40,11 @@ public class PhpTravels extends Base {
 	
 	
 	@BeforeMethod
-	public void checkFrames()
+	public void checkFrames() throws InterruptedException
 	{
 		boolean alertPresent = helper.isAlertPresent(driver);
 		if(alertPresent) {
+			Thread.sleep(2000);
 			helper.findFrame(driver,"chat-widget");
 		}
 		else

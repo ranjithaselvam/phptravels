@@ -2367,3 +2367,42 @@
 2019-12-06 11:23:45 INFO  Reports:27 - Step 10:Perform Search for the Hotels
 2019-12-06 11:24:27 INFO  Reports:27 - No ad's
 2019-12-06 11:24:29 INFO  Reports:27 - Step 14 :Identifing hotel having 4-star rating with low cost
+2019-12-09 10:24:13 INFO  Reports:27 - Step 1 : Browser Opening
+2019-12-09 10:24:25 INFO  Reports:27 - Step 2 : Enter url
+2019-12-09 10:25:01 INFO  Reports:27 - No ad's
+2019-12-09 10:25:01 INFO  Reports:27 - Step 3:Click on hotel
+2019-12-09 10:25:01 INFO  Reports:27 - Step 4:Verify user is landed into Home page 
+2019-12-09 10:25:01 INFO  Reports:27 - Step 5:Select Destination City as Bangalore
+2019-12-09 10:25:09 INFO  Reports:27 - Step 6:Check-In Date should be greater than 10days
+2019-12-09 10:25:09 INFO  Reports:27 - Step 7:Check-out Date should be +2 days of Check-In Date
+2019-12-09 10:25:09 INFO  Reports:27 - Step 8:Increased Passengers list  Adults : 4 
+2019-12-09 10:25:09 INFO  Reports:27 - Step 9:Increased Passengers list  child : 2 
+2019-12-09 10:25:10 INFO  Reports:27 - Step 10:Perform Search for the Hotels
+2019-12-09 10:25:55 INFO  Reports:27 - No ad's
+2019-12-09 10:25:56 INFO  Reports:27 - Step 14 :Identifing hotel having 4-star rating with low cost
+2019-12-09 10:27:36 INFO  Reports:27 - Step 1 : Browser Opening
+2019-12-09 10:27:47 INFO  Reports:27 - Step 2 : Enter url
+2019-12-09 10:28:23 INFO  Reports:27 - No ad's
+2019-12-09 10:28:23 INFO  Reports:27 - Step 3:Click on hotel
+2019-12-09 10:28:23 INFO  Reports:27 - Step 4:Verify user is landed into Home page 
+2019-12-09 10:28:23 INFO  Reports:27 - Step 5:Select Destination City as Bangalore
+2019-12-09 10:28:30 INFO  Reports:27 - Step 6:Check-In Date should be greater than 10days
+2019-12-09 10:28:30 INFO  Reports:27 - Step 7:Check-out Date should be +2 days of Check-In Date
+2019-12-09 10:28:31 INFO  Reports:27 - Step 8:Increased Passengers list  Adults : 4 
+2019-12-09 10:28:31 INFO  Reports:27 - Step 9:Increased Passengers list  child : 2 
+2019-12-09 10:28:31 INFO  Reports:27 - Step 10:Perform Search for the Hotels
+2019-12-09 10:29:12 INFO  Reports:27 - No ad's
+2019-12-09 10:29:14 INFO  Reports:27 - Step 14 :Identifing hotel having 4-star rating with low cost
+2019-12-09 10:32:33 INFO  Reports:27 - Step 1 : Browser Opening
+2019-12-09 10:32:43 INFO  Reports:27 - Step 2 : Enter url
+2019-12-09 10:33:20 INFO  Reports:27 - No ad's
+2019-12-09 10:33:20 INFO  Reports:27 - Step 3:Click on hotel
+2019-12-09 10:33:20 INFO  Reports:27 - Step 4:Verify user is landed into Home page 
+2019-12-09 10:33:20 INFO  Reports:27 - Step 5:Select Destination City as Bangalore
+2019-12-09 10:33:27 INFO  Reports:27 - Step 6:Check-In Date should be greater than 10days
+2019-12-09 10:33:28 INFO  Reports:27 - Step 7:Check-out Date should be +2 days of Check-In Date
+2019-12-09 10:33:28 INFO  Reports:27 - Step 8:Increased Passengers list  Adults : 4 
+2019-12-09 10:33:28 INFO  Reports:27 - Step 9:Increased Passengers list  child : 2 
+2019-12-09 10:33:28 INFO  Reports:27 - Step 10:Perform Search for the Hotels
+2019-12-09 10:34:07 INFO  Reports:27 - No ad's
+2019-12-09 10:34:08 INFO  Reports:27 - Step 14 :Identifing hotel having 4-star rating with low cost
